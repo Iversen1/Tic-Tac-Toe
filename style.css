@@ -1,0 +1,23 @@
+
+body {
+
+}
+
+#gameboard {
+    width: 8em;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 10em;
+}
+ #container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px
+  }
+  
+  #container > div {
+    background-color: #8ca0ff;
+    width: 100px;
+    height: 100px
+  
+  }
