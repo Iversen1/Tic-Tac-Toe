@@ -24,7 +24,7 @@ const gameBoard = (() => {
         for ( i= 0; i< elements.length; i++) {
             elements[i].addEventListener("click", function(evt) {
             let currentSquare = evt.target;
-            currentSquare.innerHTML = "X";
+            currentSquare.textContent = "X";
             currentSquare.style.fontSize = "xx-large"
              });
          }}
