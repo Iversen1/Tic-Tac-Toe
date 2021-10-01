@@ -29,6 +29,9 @@ const gameBoard = (() => {
              });
          }}
                 
+
+    
+
     return { renderBoard, addMark };
 
 })();

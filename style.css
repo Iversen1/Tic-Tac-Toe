@@ -1,18 +1,45 @@
 
 body {
 
+  display:grid;
+
+}
+
+#score {
+  background-color: rgb(255, 255, 255);
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+}
+
+#player1{
+  border:burlywood 1px solid;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+
+}
+#player2{
+  border:burlywood 1px solid;
+  height: 100px;
+  display: flex;
+  flex-direction: column
+  
+  
 }
 
 #gameboard {
-    width: 8em;
+    width: max-content ;
     margin-right: auto;
     margin-left: auto;
     margin-top: 10em;
+  
 }
  #container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 10px
+    grid-gap: 10px;
+
   }
   
   #container > div {
@@ -26,4 +53,5 @@ body {
     line-height: 3em;
     
 }
+
 
