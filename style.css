@@ -1,31 +1,25 @@
 
 body {
-
   display:grid;
 
 }
 
-#score {
+.scoreboard {
   background-color: rgb(255, 255, 255);
   height: 200px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  border: 1px red solid;
+  justify-content: space-around;
+  align-items:center;
 }
 
 #player1{
   border:burlywood 1px solid;
-  height: 100px;
-  display: flex;
-  flex-direction: column;
 
 }
 #player2{
   border:burlywood 1px solid;
-  height: 100px;
-  display: flex;
-  flex-direction: column
-  
-  
 }
 
 #gameboard {
