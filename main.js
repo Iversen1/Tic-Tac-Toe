@@ -1,10 +1,18 @@
-// Start with getting the X and O from the array into the HTML, 
-// Have added x to each mark
-// continue finding out if this should be InnerHTML or some other way of putting a mark on the board
+// check if the current cell has a marker
+// place players marker
+// check for win
+// Switch players 
 
-// 
-// Module
+
+
+// Start with setting the computers O, make a random number from the grid items and check for a marker
+
+
+
+
+
 const gameBoard = (() => {
+
     let gameboard = ["O", "X", "0",
                     "X", "O", "X",
                     "O", "X", "O" ]
@@ -21,25 +29,50 @@ const gameBoard = (() => {
     const addMark = () => {
         var elements = document.getElementsByClassName("single-grid");
         let singleGrid = document.getElementById("grid1");
+
         for ( i= 0; i< elements.length; i++) {
             elements[i].addEventListener("click", function(evt) {
             let currentSquare = evt.target;
-            currentSquare.textContent = "X";
-            currentSquare.style.fontSize = "xx-large"
-             });
-         }}
+        
+            if(currentSquare.textContent === "0"|| currentSquare.textContent === "X") {
+                console.log("already taken")
+            } 
+            else {
+                for (i=0; i <gameboard.length; i++) {
                 
+                currentSquare.textContent = "X";
+                currentSquare.style.fontSize = "xx-large"
+                currentSquare.setAttribute("name", "x")
 
+                singleGrid.textContent = "0";
+                singleGrid.style.fontSize = "xx-large"
+                }
+            }
+    });
+         }}
+         
+         
+        
     
 
     return { renderBoard, addMark };
 
 })();
 
-const Player = (name, points) => {
-    const getName = () => name;
-    const getPoints = () => points;
+// const Player = (name, points) => {
+//     const getName = () => name;
+//     const getPoints = () => points;
+
+// }
+
+
+// Players created by using factory functions
+const Person = (name) => {
+    const sayName = () => console.log("my name is " + name)
+    return {sayName}
 }
+
+
 
 const displayController = (() => {
 })
@@ -55,3 +88,27 @@ gameBoard.addMark();
 //     addEventListener("click", function() {
 //         console.log(element)
 //     }) );
+
+
+// const addMark = () => {
+//     var elements = document.getElementsByClassName("single-grid");
+//     let singleGrid = document.getElementById("grid1");
+//     for ( i= 0; i< elements.length; i++) {
+//         elements[i].addEventListener("click", function(evt) {
+//         let currentSquare = evt.target;
+//         if(currentSquare.textContent === "0" || currentSquare.textContent === "X") {
+//           } 
+//         else {
+//             for (i=0; i <gameLetters.length; i++) {
+//                 let number = [];
+//                 if ( gameLetters) 
+//                 number += [i]; 
+//                 console.log(number[i])
+            
+//             currentSquare.textContent = "X";
+//             currentSquare.style.fontSize = "xx-large"
+//             }
+//         }
+// });
+//      }}
+     
