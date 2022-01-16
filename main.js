@@ -6,7 +6,9 @@
 
 
 // Start with setting the computers O, make a random number from the grid items and check for a marker
-
+// Possible solution: 
+// after each mark, add the target board value number to the players own score by array
+// Then compare this to the winconditions array
 
 
 
@@ -44,8 +46,8 @@ const gameBoard = (() => {
                 currentSquare.style.fontSize = "xx-large"
                 currentSquare.setAttribute("name", "x")
 
-                singleGrid.textContent = "0";
-                singleGrid.style.fontSize = "xx-large"
+                    // singleGrid.textContent = "0";
+                    // singleGrid.style.fontSize = "xx-large"
                 }
             }
     });
@@ -81,6 +83,31 @@ const displayController = (() => {
 gameBoard.renderBoard();
 gameBoard.addMark();
 
+
+
+const game = (() => {
+
+    const winConditions = [
+        [0,1,2],
+        [3,4,5],
+        [6,7,8],
+        [0,3,6],
+        [1,4,7],
+        [2,5,8],
+        [0,4,8],
+        [2,4,6]
+    ];
+
+    const test = [2,4,6];
+
+    const checkWin = () => {
+            if (test == winnConditions) {
+                console.log("winner")
+            }
+    } 
+
+
+})();
 
 
 
